@@ -1,4 +1,5 @@
 import java.awt.print.Book;
+import java.sql.Date;
 import java.util.Scanner;
 
 import jdk.nashorn.internal.ir.BreakableNode;
@@ -43,9 +44,6 @@ public class library {
 			break;
 		case 6: statistics();
 			break;
-		
-		
-
 		default:
 			break;
 		}
@@ -102,7 +100,17 @@ public class library {
 		System.out.println("im choose " + i);
 		choice();
 	}
+  public class Book {
+		String nameBook;
+		String MKT;
+		String fname;
+		String lname;
+		Date YOfPublic;
+		String country;
+		
+		
 
+	}
 	
 
 }

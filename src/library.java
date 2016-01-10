@@ -5,11 +5,16 @@ import java.util.Scanner;
 import jdk.nashorn.internal.ir.BreakableNode;
 
 public class library {
+	static Book[] BooksVec;
+  	static int TotalBooks, HebBooks, OtherBooks; 
+  	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		TotalBooks = HebBooks = OtherBooks = 0;
+        BooksVec = new Book[100];
 		choice();
-		 Book books = new Book() ; 
+		  
 	}
 
 	
@@ -94,11 +99,12 @@ public class library {
 
 
 
-	private static void insertBook() {
+	public static void insertBook() {
 		// TODO Auto-generated method stub
-		int i;
-		System.out.println("im choose " + i);
-		choice();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("pls insert " );
+		BooksVec[TotalBooks].nameBook= sc.next();
+		//choice();
 	}
   public class Book {
 		String nameBook;

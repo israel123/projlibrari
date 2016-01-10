@@ -24,7 +24,7 @@ public class library {
 
 		int i = 0;
 		
-		System.out.println("pls insert number");
+		System.out.println("please insert number");
 		System.out.println("1 to insert book");
 		System.out.println("2 to update book");
 		System.out.println("3 to delete book");
@@ -82,18 +82,30 @@ public class library {
 
 
 	private static void deleteBook() {
-		// TODO Auto-generated method stub
-
-		System.out.println("im choose 3");
-		choice();
+	System.out.println("im choose 3");
+	Scanner in = new Scanner(System.in);
+	System.out.println("please enter the Book number You want to delete from 0-100  ");
+	int delete =0 ;
+	delete=in.nextInt(); 
+	if (BooksVec[delete] == BooksVec[TotalBooks] )
+	{
+		BooksVec[delete] = BooksVec[TotalBooks];
+	}
+	else
+	{
+		BooksVec[delete] = BooksVec[TotalBooks];
+	}
+	choice();
 	}
 
 
 
 	private static void updateBook() {
-		// TODO Auto-generated method stub
-
-		System.out.println("im choose 2");
+	System.out.println("You choose 2");
+	
+		
+		
+		
 		choice();
 	}
 
@@ -102,18 +114,39 @@ public class library {
 	public static void insertBook() {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
-		System.out.println("pls insert " );
+		BooksVec[TotalBooks]= new Book();
+		
+		System.out.println("please enter the Book name  " );
 		BooksVec[TotalBooks].nameBook= sc.next();
+		
+		System.out.println("please enter the author_Fname  " );
+		BooksVec[TotalBooks]. fname= sc.next();
+		
+		System.out.println("please enter the author_Lname  " );
+		BooksVec[TotalBooks]. lname= sc.next();
+		
+		System.out.println("please enter the Year of Publication " );
+		BooksVec[TotalBooks]. YOfPublic = sc.nextInt();
+		
+		
+		System.out.println("please enter the number of Edition " );
+		BooksVec[TotalBooks]. edition = sc.nextInt();
+		
+		
+		System.out.println("please enter if  Israeli Book pressure-1 or other pressure-2 " );
+		BooksVec[TotalBooks].TypBook = sc.nextInt();
 		//choice();
+		TotalBooks++;
+		
 	}
   public class Book {
 		String nameBook;
-		String MKT;
+		int edition;
 		String fname;
 		String lname;
-		Date YOfPublic;
+		int YOfPublic;
 		String country;
-		
+		int TypBook;
 		
 
 	}
